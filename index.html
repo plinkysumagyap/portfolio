@@ -10,39 +10,7 @@
   <title>Plinky Sumagyap Portfolio</title>
 </head>
 
-<script>
-  /**
- * Turn canva elements into iframe
- *
- * @param {!Element} embedEl
- */
-function embedify(embedEl) {
-    // Some more stuff here unrelated to resizing
-    // Watch window in case size changes - note: would be good to watch for div changes as well
-    window.addEventListener('resize', () => resize(embedEl, iframe, ratio), true);
-}
-/**
-* Matches the element to the wrapper size with the correct ratio
-*
-* @param {!Element} wrapper
-* @param {!Element} element
-* @param {number} ratio
-*/
-function resize(wrapper, element, ratio) {
-    // Get parent container and match width for embed.
-    const parentElRect = wrapper.getBoundingClientRect();
-    const maxWidth = wrapper.getAttribute('data-max-width') ? wrapper.getAttribute('data-max-width') : MAX_EMBED_WIDTH_PX;
-    const embedWidth = Math.min(Math.max(MIN_EMBED_WIDTH_PX, parentElRect.width), maxWidth);
-    // The same logic is currently defined here: com.canva.cfe.mvc.OembedController.buildResponse
-    const actionBarHeight = embedWidth < 300 ? 43 : 45;
-    const embedHeight = (embedWidth * ratio) + actionBarHeight;
-    element.style.width = `${embedWidth}px`;
-    element.style.height = `${embedHeight}px`;
-    if (wrapper.getAttribute('data-max-width')) {
-        wrapper.style.width = `${embedWidth}px`;
-    }
-}
-</script>
+
 <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">

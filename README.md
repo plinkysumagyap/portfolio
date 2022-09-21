@@ -2,4 +2,4 @@
 
 ## Graphic Design Projects
 
-https://plinkysumagyap.github.io/portfolio
+Portfolio Link: https://plinkysumagyap.github.io/portfolio
